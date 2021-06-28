@@ -23,6 +23,9 @@ namespace RazorPagesTurtle8.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18, 2)");
+
+                    b.Property<string>("Rating")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("ReleaseDate")

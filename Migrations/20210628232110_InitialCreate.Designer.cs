@@ -9,7 +9,7 @@ using RazorPagesTurtle8.Data;
 namespace RazorPagesTurtle8.Migrations
 {
     [DbContext(typeof(RazorPagesTurtle8Context))]
-    [Migration("20210628224635_InitialCreate")]
+    [Migration("20210628232110_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,6 +25,9 @@ namespace RazorPagesTurtle8.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18, 2)");
+
+                    b.Property<string>("Rating")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("ReleaseDate")
